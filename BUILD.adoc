@@ -1,0 +1,25 @@
+// SPDX-FileCopyrightText: 2025 Shun Sakai
+//
+// SPDX-License-Identifier: CC0-1.0
+
+= How to Build
+
+== Prerequisites
+
+.To build *pagen*, you will need the following dependencies
+* https://go.dev/[Go] (v1.22.0 or later)
+
+== Building from source
+
+.To clone the repository
+[source,sh]
+----
+git clone https://github.com/sorairolake/pagen.git
+cd pagen
+----
+
+.To build a package
+[source,sh]
+----
+just build
+----
