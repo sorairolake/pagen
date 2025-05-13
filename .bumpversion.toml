@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2025 Shun Sakai
+#
+# SPDX-License-Identifier: CC0-1.0
+
+[tool.bumpversion]
+current_version = "0.1.0"
+
+[[tool.bumpversion.files]]
+filename = "testdata/version.ct"
+
+[[tool.bumpversion.files]]
+filename = "version.go"

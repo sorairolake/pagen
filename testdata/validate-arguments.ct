@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2025 Shun Sakai
+#
+# SPDX-License-Identifier: CC0-1.0
+
+$ pagen --> FAIL
+Usage: pagen [OPTIONS] <FILE>
+  -height uint
+    	Set the height of pixel art (default 256)
+  -version
+    	Print version number
+  -width uint
+    	Set the width of pixel art (default 256)
+
+$ pagen -width n output.png --> FAIL
+invalid value "n" for flag -width: parse error
+Usage: pagen [OPTIONS] <FILE>
+  -height uint
+    	Set the height of pixel art (default 256)
+  -version
+    	Print version number
+  -width uint
+    	Set the width of pixel art (default 256)
+
+$ pagen -height n output.png --> FAIL
+invalid value "n" for flag -height: parse error
+Usage: pagen [OPTIONS] <FILE>
+  -height uint
+    	Set the height of pixel art (default 256)
+  -version
+    	Print version number
+  -width uint
+    	Set the width of pixel art (default 256)
