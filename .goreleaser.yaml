@@ -1,0 +1,50 @@
+# SPDX-FileCopyrightText: 2025 Shun Sakai
+#
+# SPDX-License-Identifier: CC0-1.0
+
+version: 2
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - flags:
+      - -trimpath
+    ldflags:
+      - -s -w
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - freebsd
+      - linux
+      - openbsd
+      - windows
+    goarch:
+      - amd64
+      - arm64
+
+archives:
+  - formats: tar.zst
+    # use zip for windows archives
+    format_overrides:
+      - goos: windows
+        formats: zip
+    files:
+      - AUTHORS.adoc
+      - BUILD.adoc
+      - CHANGELOG.adoc
+      - CONTRIBUTING.adoc
+      - LICENSES/*
+      - README.md
+
+checksum:
+  algorithm: sha3-512
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"

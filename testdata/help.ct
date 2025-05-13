@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2025 Shun Sakai
+#
+# SPDX-License-Identifier: CC0-1.0
+
+$ pagen -h
+Usage: pagen [OPTIONS] <FILE>
+  -height uint
+    	Set the height of pixel art (default 256)
+  -version
+    	Print version number
+  -width uint
+    	Set the width of pixel art (default 256)
+
+$ pagen -help
+Usage: pagen [OPTIONS] <FILE>
+  -height uint
+    	Set the height of pixel art (default 256)
+  -version
+    	Print version number
+  -width uint
+    	Set the width of pixel art (default 256)

@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2025 Shun Sakai
+#
+# SPDX-License-Identifier: CC0-1.0
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+/pagen
+
+# Test binary, built with `go test -c`
+*.test
+
+# GoReleaser
+dist/
