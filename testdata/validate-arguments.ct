@@ -4,6 +4,8 @@
 
 $ pagen --> FAIL
 Usage: pagen [OPTIONS] <FILE>
+  -block-size uint
+    	Set the block size of pixel art (default 1)
   -height uint
     	Set the height of pixel art (default 256)
   -version
@@ -14,6 +16,8 @@ Usage: pagen [OPTIONS] <FILE>
 $ pagen -width n output.png --> FAIL
 invalid value "n" for flag -width: parse error
 Usage: pagen [OPTIONS] <FILE>
+  -block-size uint
+    	Set the block size of pixel art (default 1)
   -height uint
     	Set the height of pixel art (default 256)
   -version
@@ -24,6 +28,20 @@ Usage: pagen [OPTIONS] <FILE>
 $ pagen -height n output.png --> FAIL
 invalid value "n" for flag -height: parse error
 Usage: pagen [OPTIONS] <FILE>
+  -block-size uint
+    	Set the block size of pixel art (default 1)
+  -height uint
+    	Set the height of pixel art (default 256)
+  -version
+    	Print version number
+  -width uint
+    	Set the width of pixel art (default 256)
+
+$ pagen -block-size n output.png --> FAIL
+invalid value "n" for flag -block-size: parse error
+Usage: pagen [OPTIONS] <FILE>
+  -block-size uint
+    	Set the block size of pixel art (default 1)
   -height uint
     	Set the height of pixel art (default 256)
   -version

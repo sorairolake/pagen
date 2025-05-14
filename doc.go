@@ -20,6 +20,8 @@
 //		Set the width of pixel art.
 //	-height <SIZE>
 //		Set the height of pixel art.
+//	-block-size <SIZE>
+//		Set the block size of pixel art.
 //	-version
 //		Print version number.
 package main
