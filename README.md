@@ -36,8 +36,12 @@ Please see [BUILD.adoc].
 ### Basic usage
 
 ```sh
-pagen output.png
+pagen -width 1280 -height 720 -block-size 80 output.png
 ```
+
+Here is an example of generated pixel art:
+
+![Output](assets/output.png)
 
 ## Source code
 
