@@ -4,6 +4,8 @@
 
 $ pagen -h
 Usage: pagen [OPTIONS] <FILE>
+  -block-size uint
+    	Set the block size of pixel art (default 1)
   -height uint
     	Set the height of pixel art (default 256)
   -version
@@ -13,6 +15,8 @@ Usage: pagen [OPTIONS] <FILE>
 
 $ pagen -help
 Usage: pagen [OPTIONS] <FILE>
+  -block-size uint
+    	Set the block size of pixel art (default 1)
   -height uint
     	Set the height of pixel art (default 256)
   -version

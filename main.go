@@ -33,12 +33,12 @@ func main() {
 
 	outputPath := filepath.Clean(flag.Arg(0))
 
-	width, height := int(opt.width), int(opt.height)
+	width, height, blockSize := int(opt.width), int(opt.height), int(opt.blockSize)
 	img := image.NewNRGBA(image.Rect(0, 0, width, height))
 
 	var wg sync.WaitGroup
-	for y := range height {
-		for x := range width {
+	for y := 0; y < height; y += blockSize {
+		for x := 0; x < width; x += blockSize {
 			wg.Add(1)
 			go func(x, y int) {
 				defer wg.Done()
@@ -46,7 +46,12 @@ func main() {
 				g := uint8(rand.N(math.MaxUint8))
 				b := uint8(rand.N(math.MaxUint8))
 				a := uint8(math.MaxUint8)
-				img.Set(x, y, color.NRGBA{r, g, b, a})
+
+				for by := 0; (by < blockSize) && (y+by < height); by++ {
+					for bx := 0; (bx < blockSize) && (x+bx < width); bx++ {
+						img.Set(x+bx, y+by, color.NRGBA{r, g, b, a})
+					}
+				}
 			}(x, y)
 		}
 	}
