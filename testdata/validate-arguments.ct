@@ -8,6 +8,8 @@ Usage: pagen [OPTIONS] <FILE>
     	Set the block size of pixel art (default 1)
   -height uint
     	Set the height of pixel art (default 256)
+  -svg
+    	Generate SVG file instead of PNG file
   -version
     	Print version number
   -width uint
@@ -20,6 +22,8 @@ Usage: pagen [OPTIONS] <FILE>
     	Set the block size of pixel art (default 1)
   -height uint
     	Set the height of pixel art (default 256)
+  -svg
+    	Generate SVG file instead of PNG file
   -version
     	Print version number
   -width uint
@@ -32,6 +36,8 @@ Usage: pagen [OPTIONS] <FILE>
     	Set the block size of pixel art (default 1)
   -height uint
     	Set the height of pixel art (default 256)
+  -svg
+    	Generate SVG file instead of PNG file
   -version
     	Print version number
   -width uint
@@ -44,6 +50,8 @@ Usage: pagen [OPTIONS] <FILE>
     	Set the block size of pixel art (default 1)
   -height uint
     	Set the height of pixel art (default 256)
+  -svg
+    	Generate SVG file instead of PNG file
   -version
     	Print version number
   -width uint

@@ -12,7 +12,7 @@
 // Arguments:
 //
 //	<FILE>
-//		The path of the generated PNG file.
+//		The path of the generated image file.
 //
 // Options:
 //
@@ -22,6 +22,8 @@
 //		Set the height of pixel art.
 //	-block-size <SIZE>
 //		Set the block size of pixel art.
+//	-svg
+//		Generate SVG file instead of PNG file.
 //	-version
 //		Print version number.
 package main
