@@ -43,6 +43,16 @@ Here is an example of generated pixel art:
 
 ![Output](assets/output.png)
 
+### Generate as a SVG image
+
+```sh
+pagen -width 1280 -height 720 -block-size 80 -svg output.svg
+```
+
+Here is an example of generated pixel art:
+
+![Output](assets/output.svg)
+
 ## Source code
 
 The upstream repository is available at

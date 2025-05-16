@@ -6,7 +6,10 @@ module github.com/sorairolake/pagen
 
 go 1.22
 
-require github.com/google/go-cmdtest v0.4.0
+require (
+	github.com/ajstarks/svgo v0.0.0-20211024235047-1546f124cd8b
+	github.com/google/go-cmdtest v0.4.0
+)
 
 require (
 	github.com/google/go-cmp v0.3.1 // indirect

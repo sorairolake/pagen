@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Shun Sakai
+#
+# SPDX-License-Identifier: CC0-1.0
+
+$ pagen -width 1280 -height 720 -block-size 80 output.png
+
+$ pagen -width 1280 -height 720 -block-size 80 -svg output.svg
