@@ -7,7 +7,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"log"
 	"os"
 )
 
@@ -19,7 +18,15 @@ func main() {
 		os.Exit(0)
 	}
 
-	if flag.NArg() != 1 {
+	n := flag.NArg()
+
+	switch {
+	case n == 0:
+		fmt.Fprintln(os.Stderr, "pagen: a required argument was not provided")
+		flag.Usage()
+		os.Exit(1)
+	case n > 1:
+		fmt.Fprintf(os.Stderr, "pagen: unexpected argument '%v' found\n", flag.Arg(1))
 		flag.Usage()
 		os.Exit(1)
 	}
@@ -29,11 +36,13 @@ func main() {
 
 	if opt.svg {
 		if err := generateSVG(outputPath, width, height, blockSize); err != nil {
-			log.Fatal(err)
+			fmt.Fprintf(os.Stderr, "pagen: %v\n", err)
+			os.Exit(1)
 		}
 	} else {
 		if err := generatePNG(outputPath, width, height, blockSize); err != nil {
-			log.Fatal(err)
+			fmt.Fprintf(os.Stderr, "pagen: %v\n", err)
+			os.Exit(1)
 		}
 	}
 }
