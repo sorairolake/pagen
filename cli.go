@@ -28,7 +28,10 @@ func init() {
 	flag.BoolVar(&opt.version, "version", false, "Print version number")
 
 	flag.Usage = func() {
-		if _, err := fmt.Fprintf(flag.CommandLine.Output(), "Usage: pagen [OPTIONS] <FILE>\n"); err != nil {
+		if _, err := fmt.Fprintf(
+			flag.CommandLine.Output(),
+			"Usage: pagen [OPTIONS] <FILE>\n",
+		); err != nil {
 			log.Fatal(err)
 		}
 
