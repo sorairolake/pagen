@@ -35,12 +35,14 @@ func main() {
 	width, height, blockSize := int(opt.width), int(opt.height), int(opt.blockSize)
 
 	if opt.svg {
-		if err := generateSVG(outputPath, width, height, blockSize); err != nil {
+		err := generateSVG(outputPath, width, height, blockSize)
+		if err != nil {
 			fmt.Fprintf(os.Stderr, "pagen: %v\n", err)
 			os.Exit(1)
 		}
 	} else {
-		if err := generatePNG(outputPath, width, height, blockSize); err != nil {
+		err := generatePNG(outputPath, width, height, blockSize)
+		if err != nil {
 			fmt.Fprintf(os.Stderr, "pagen: %v\n", err)
 			os.Exit(1)
 		}
