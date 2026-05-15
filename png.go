@@ -16,9 +16,11 @@ func generatePNG(outputPath string, width, height, blockSize int) (err error) {
 	img := image.NewNRGBA(image.Rect(0, 0, width, height))
 
 	var wg sync.WaitGroup
+
 	for y := 0; y < height; y += blockSize {
 		for x := 0; x < width; x += blockSize {
 			wg.Add(1)
+
 			go func(x, y int) {
 				defer wg.Done()
 
@@ -41,7 +43,8 @@ func generatePNG(outputPath string, width, height, blockSize int) (err error) {
 	}
 
 	defer func() {
-		if e := output.Close(); e != nil {
+		e := output.Close()
+		if e != nil {
 			err = e
 		}
 	}()

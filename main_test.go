@@ -25,7 +25,8 @@ func TestCLI(t *testing.T) {
 	}
 
 	defer func() {
-		if err := os.Remove("pagen"); err != nil {
+		err := os.Remove("pagen")
+		if err != nil {
 			t.Fatal(err)
 		}
 	}()

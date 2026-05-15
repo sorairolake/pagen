@@ -18,12 +18,14 @@ func generateSVG(outputPath string, width, height, blockSize int) (err error) {
 	}
 
 	defer func() {
-		if e := output.Close(); e != nil {
+		e := output.Close()
+		if e != nil {
 			err = e
 		}
 	}()
 
 	canvas := svg.New(output)
+
 	canvas.Start(width, height)
 	defer canvas.End()
 
